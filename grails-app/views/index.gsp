@@ -12,7 +12,12 @@
         <span class="menuButton"><g:link class="list" controller="usuario" action="perfil"><g:message code="general.perfil" /></g:link></span>
       </sec:ifLoggedIn>
       <span class="menuButton"><g:link class="list" controller="equipo" ><g:message code="general.equipo" /></g:link></span>
-      <span class="menuButton"><g:link class="list" controller="logout" ><g:message code="general.salir" /></g:link></span>
+	  <sec:ifLoggedIn>
+        <span class="menuButton"><g:link class="list" controller="logout" ><g:message code="general.salir" /></g:link></span>
+	  </sec:ifLoggedIn>
+	  <sec:ifNotLoggedIn>
+        <span class="menuButton"><g:link class="list" controller="login" ><g:message code="general.login" /></g:link></span>
+	  </sec:ifNotLoggedIn>
     </div>
     <div class="body">
       <h1>FIT APPS</h1>

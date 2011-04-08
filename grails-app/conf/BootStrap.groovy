@@ -33,7 +33,7 @@ class BootStrap {
 
 		log.debug "Creando usuario Admin"
         def usuariot = Usuario.findByUsername('test')
-        if (!usuario){
+        if (!usuariot){
             usuariot = new Usuario(
                 username : 'test'
                 , password : springSecurityService.encodePassword('test')
@@ -77,5 +77,4 @@ class BootStrap {
     def logout() {
         SCH.context.authentication = null
     }
-    
 } 

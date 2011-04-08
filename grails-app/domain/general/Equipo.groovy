@@ -2,13 +2,12 @@ package general
 
 class Equipo {
 	String nombre
-    String integrante1
+	String integrante1
 	String semestre1
     String integrante2
 	String semestre2
     String integrante3
 	String semestre3
-
 
     static constraints = {
         nombre blank: false, size:1..64
@@ -18,7 +17,6 @@ class Equipo {
         semestre2 maxSize:32, inList:['2','4','6','8']
         integrante3 blank: false, size:1..64
         semestre3 maxSize:32, inList:['2','4','6','8']
-
     }
 
     static mapping = {

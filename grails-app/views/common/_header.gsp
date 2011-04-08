@@ -4,4 +4,7 @@
         Bienvenido <sec:loggedInUserInfo field="username" /><br/>
         <g:link class="perfil" controller="logout" style="color:white;font-weight:normal;"><g:message code="general.salir" /></g:link>
     </sec:ifLoggedIn>
+    <sec:ifNotLoggedIn>
+        <g:link class="perfil" controller="login" style="color:white;font-weight:normal;"><g:message code="general.login" /></g:link>
+    </sec:ifNotLoggedIn>
 </div>

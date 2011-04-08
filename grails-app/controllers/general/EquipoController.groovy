@@ -3,8 +3,6 @@ package general
 import grails.plugins.springsecurity.Secured
 import general.Integrante
 
-@Secured(['ROLE_USER'])
-
 class EquipoController {
 
     def equipoService
@@ -46,17 +44,20 @@ class EquipoController {
         }
     }
 
+    @Secured(['ROLE_ADMIN'])
     def ver = {
         def equipo = equipoService.obtiene(params.id)
         return [equipo:equipo]
     }
 
+    @Secured(['ROLE_ADMIN'])
     def edita = {
         def equipo = equipoService.obtiene(params.id)
 		def integrante = new Integrante(params)
         return [equipo:equipo, integrante:integrante]
     }
 
+    @Secured(['ROLE_ADMIN'])
     def actualiza = {
         def equipo = equipoService.obtiene(params.id)
         try {
@@ -77,7 +78,7 @@ class EquipoController {
             render(view:"edita",model:[equipo:equipo])
         }
     }
-
+    @Secured(['ROLE_ADMIN'])
     def elimina = {
         try {
             Equipo.withTransaction {
