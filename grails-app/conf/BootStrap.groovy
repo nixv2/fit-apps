@@ -31,9 +31,25 @@ class BootStrap {
             ).save(failOnError: true)
         }
 
+		log.debug "Creando usuario Admin"
+        def usuariot = Usuario.findByUsername('test')
+        if (!usuario){
+            usuariot = new Usuario(
+                username : 'test'
+                , password : springSecurityService.encodePassword('test')
+                , enabled : true
+                , nombre:'test'
+                , apellidos:'test'
+                , correo:'test@test.com'
+            ).save(failOnError: true)
+        }
+
         log.debug "Creando Relacion rol usuario"
         if (!usuario.authorities.contains(admin)){
             UsuarioRol.create(usuario, admin)
+        }
+        if (!usuariot.authorities.contains(user)){
+            UsuarioRol.create(usuariot, user)
         }
     }
 

@@ -1,10 +1,13 @@
 <head>
 <meta name='layout' content='main' />
-<title>Denied</title>
+<title><g:message code="general.denegado" /></title>
 </head>
 
 <body>
-<div class='body'>
-	<div class='errors'>Sorry, you're not authorized to view this page.</div>
-</div>
+	<div class="nav">
+		<span class="menuButton"><a class="home" href="${resource(dir: '')}"><g:message code="general.inicio"/></a></span>
+	</div>
+	<div class='body'>
+		<div class='errors'><g:message code="general.denegado.mensaje" /></div>
+	</div>
 </body>

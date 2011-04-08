@@ -7,7 +7,7 @@
     </head>
     <body>
         <div class="nav">
-            <span class="menuButton"><g:link class="home" action="admin"><g:message code="general.admin" /></g:link></span>
+            <span class="menuButton"><g:link class="home" controller="admin"><g:message code="general.admin" /></g:link></span>
             <span class="menuButton"><g:link class="create" action="nuevo"><g:message code="usuario.nuevo" /></g:link></span>
         </div>
         <div class="body">
