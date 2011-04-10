@@ -88,7 +88,22 @@
                                     <g:select name="semestre3" from="${equipo.constraints.semestre3.inList}" value="${equipo?.semestre3}" valueMessagePrefix="equipo.semestre3"  />
                                 </td>
                             </tr>
-
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="usuarioPC2"><g:message code="equipo.usuarioPC2" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: usuario)}">
+                                    <g:textField disable="yes" name="usuarioPC2" maxlength="64" value="${usuario}" />
+                                </td>
+                            </tr>
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="contraseñaPC2"><g:message code="equipo.contraseñaPC2" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: equipo, field: 'contraseñaPC2', 'errors')}">
+                                    <g:textField name="contraseñaPC2" maxlength="64" value="${equipo.contraseñaPC2}" disable="true"/>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
