@@ -88,7 +88,7 @@
                                     <g:select name="semestre3" from="${equipo.constraints.semestre3.inList}" value="${equipo?.semestre3}" valueMessagePrefix="equipo.semestre3"  />
                                 </td>
                             </tr>
-                            </tr>
+
                         </tbody>
                     </table>
                 </div>
