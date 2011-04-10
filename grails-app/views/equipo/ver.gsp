@@ -22,6 +22,10 @@
                             <td valign="top" class="name"><g:message code="equipo.nombre" /></td>
                             <td valign="top" class="value">${fieldValue(bean: equipo, field: "nombre")}</td>
                         </tr>
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="equipo.correo" /></td>
+                            <td valign="top" class="value">${fieldValue(bean: equipo, field: "correo")}</td>
+                        </tr>
                         <tr>
                             <td valign="top" class="name"><g:message code="equipo.integrante1" /></td>
                             <td valign="top" class="value">${fieldValue(bean: equipo, field: "integrante1")}</td>

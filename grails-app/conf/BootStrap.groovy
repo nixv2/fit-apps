@@ -77,5 +77,4 @@ class BootStrap {
     def logout() {
         SCH.context.authentication = null
     }
-    
 } 
