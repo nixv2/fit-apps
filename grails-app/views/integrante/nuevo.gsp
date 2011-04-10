@@ -17,7 +17,7 @@
             </g:if>
             <g:hasErrors bean="${integrante}">
             <div class="errors">
-                <g:renderErrors bean="${integrante}" as="lista" />
+                <g:renderErrors bean="${integrante}" as="list" />
             </div>
             </g:hasErrors>
             <g:form action="crea" method="post" >

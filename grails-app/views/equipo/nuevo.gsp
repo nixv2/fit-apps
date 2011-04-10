@@ -16,9 +16,9 @@
 	            <div class="message">${flash.message}</div>
             </g:if>
             <g:hasErrors bean="${equipo}">
-            <div class="errors">
-                <g:renderErrors bean="${equipo}" as="lista" />
-            </div>
+				<div class="errors">
+                	<g:renderErrors bean="${equipo}" as="list" />
+	            </div>
             </g:hasErrors>
             <g:form action="crea" method="post" >
                 <div class="dialog">
@@ -30,6 +30,14 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: equipo, field: 'nombre', 'errors')}">
                                     <g:textField name="nombre" maxlength="64" value="${equipo?.nombre}" />
+                                </td>
+                            </tr>
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="correo"><g:message code="equipo.correo" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: equipo, field: 'correo', 'errors')}">
+                                    <g:textField name="correo" maxlength="64" value="${equipo?.correo}" />
                                 </td>
                             </tr>
                             <tr class="prop">

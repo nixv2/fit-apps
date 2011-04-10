@@ -36,6 +36,14 @@
                             </tr>
                             <tr class="prop">
                                 <td valign="top" class="name">
+                                    <label for="correo"><g:message code="equipo.correo" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: equipo, field: 'correo', 'errors')}">
+                                    <g:textField name="correo" maxlength="64" value="${equipo?.correo}" />
+                                </td>
+                            </tr>
+                            <tr class="prop">
+                                <td valign="top" class="name">
                                     <label for="integrante1"><g:message code="equipo.integrante1" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: equipo, field: 'integrante1', 'errors')}">
@@ -48,6 +56,14 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: equipo, field: 'semestre1', 'errors')}">
                                     <g:select name="semestre1" from="${equipo.constraints.semestre1.inList}" value="${equipo?.semestre1}" valueMessagePrefix="equipo.semestre1"  />
+                                </td>
+                            </tr>
+							<tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="correo"><g:message code="equipo.correo" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: equipo, field: 'correo', 'errors')}">
+                                    <g:textField name="correo" maxlength="64" value="${equipo?.correo}" />
                                 </td>
                             </tr>
                             <tr class="prop">

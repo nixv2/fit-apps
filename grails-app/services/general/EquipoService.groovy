@@ -1,12 +1,14 @@
 package general
 
 import auditoria.general.XEquipo
+import grails.plugin.mail.MailService
 
 class EquipoService {
 
     static transactional = true
     def springSecurityService
     def sessionFactory
+	def mailService
 
     List<Equipo> lista(def params) {
         log.debug "Lista de equipos"
@@ -39,6 +41,11 @@ class EquipoService {
     Equipo crea(Equipo equipo) {
         equipo.save()
         audita(equipo,"CREAR")
+		mailService.sendMail {
+			to equipo.correo
+			subject "${equipo.nombre}"
+			body (view:"/equipo/enviar", model:[equipo:equipo], plugin:"email-confirmation")
+		}
         return equipo
     }
 

@@ -16,9 +16,9 @@
 	            <div class="message">${flash.message}</div>
             </g:if>
             <g:hasErrors bean="${usuario}">
-            <div class="errors">
-                <g:renderErrors bean="${usuario}" as="lista" />
-            </div>
+            	<div class="errors">
+                	<g:renderErrors bean="${usuario}" as="list" />
+            	</div>
             </g:hasErrors>
             <g:form action="crea" method="post" >
                 <div class="dialog">

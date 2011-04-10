@@ -43,6 +43,18 @@ grails.scaffolding.templates.domainSuffix = 'Instance'
 grails.json.legacy.builder = false
 // enabled native2ascii conversion of i18n properties files
 grails.enable.native2ascii = true
+
+// configuración para mandar correos, de:
+grails {
+   mail {
+     host = "smtp.live.com"
+     port = 587
+     username = "nujev@hotmail.com"
+     password = "159753hotmail"
+     props = ["mail.smtp.starttls.enable":"true", 
+                  "mail.smtp.port":"587"]
+   }
+}
 // whether to install the java.util.logging bridge for sl4j. Disable for AppEngine!
 grails.logging.jul.usebridge = true
 // packages to include in Spring bean scanning
@@ -106,3 +118,4 @@ grails.plugins.springsecurity.authority.className = 'general.Rol'
 grails.plugins.springsecurity.roleHierarchy = '''
    ROLE_ADMIN > ROLE_USER
 '''
+
