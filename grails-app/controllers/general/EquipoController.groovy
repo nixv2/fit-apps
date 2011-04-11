@@ -30,7 +30,7 @@ class EquipoController {
         def usuario = "team"+(resultado.cantidad+1)
         log.debug "usuario $usuario"
         Equipo equipo = new Equipo(params)
-        return [equipo:equipo, usuario: usuario]
+        return [equipo:equipo]//, usuario: usuario]
     }
 
     def crea = {
