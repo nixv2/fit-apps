@@ -50,6 +50,14 @@
                             <td valign="top" class="name"><g:message code="equipo.semestre3" /></td>
                             <td valign="top" class="value">${fieldValue(bean: equipo, field: "semestre3")}</td>
                         </tr>
+                        <tr>
+                            <td valign="top" class="name"><g:message code="equipo.usuarioPC2" /></td>
+                            <td valign="top" class="value">${fieldValue(bean: equipo, field: "usuarioPC2")}</td>
+                        </tr>
+                        <tr>
+                            <td valign="top" class="name"><g:message code="equipo.contraseñaPC2" /></td>
+                            <td valign="top" class="value">${fieldValue(bean: equipo, field: "contraseñaPC2")}</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

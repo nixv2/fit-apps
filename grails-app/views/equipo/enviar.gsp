@@ -6,4 +6,7 @@ Integrantes:
 	${equipo.integrante2} semestre: ${equipo.semestre2}
 	${equipo.integrante3} semestre: ${equipo.semestre3}
 
+Datos para PC2
+	usuario ${equipo.usuarioPC2}
+	constraseña ${equipo.contraseñaPC2}
 

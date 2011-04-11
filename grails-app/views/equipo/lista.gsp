@@ -41,24 +41,14 @@
                     <thead>
                         <tr>
                             <g:sortableColumn property="nombre" title="${message(code:'equipo.nombre')}" />
-<!--                            <g:sortableColumn property="integrante1" title="${message(code:'equipo.integrante1')}" />
-                            <g:sortableColumn property="semestre1" title="${message(code:'equipo.semestre1')}" />
-                            <g:sortableColumn property="integrante2" title="${message(code:'equipo.integrante2')}" />
-                            <g:sortableColumn property="semestre2" title="${message(code:'equipo.semestre2')}" />
-                            <g:sortableColumn property="integrante3" title="${message(code:'equipo.integrante3')}" />
-                            <g:sortableColumn property="semestre3" title="${message(code:'equipo.semestre3')}" />-->
+							<g:sortableColumn property="nombre" title="${message(code:'equipo.usuarioPC2')}" />
                         </tr>
                     </thead>
                     <tbody>
 	                    <g:each in="${equipos}" status="i" var="equipo">
 	                        <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
 	                            <td><g:link action="ver" id="${equipo.id}">${fieldValue(bean: equipo, field: "nombre")}</g:link></td>
-<!--	                            <td>${fieldValue(bean: equipo, field: "integrante1")}</td>
-	                            <td>${fieldValue(bean: equipo, field: "semestre1")}</td>
-	                            <td>${fieldValue(bean: equipo, field: "integrante2")}</td>
-	                            <td>${fieldValue(bean: equipo, field: "semestre2")}</td>
-	                            <td>${fieldValue(bean: equipo, field: "integrante3")}</td>
-	                            <td>${fieldValue(bean: equipo, field: "semestre3")}</td>-->
+	                            <td>${fieldValue(bean: equipo, field: "usuarioPC2")}</td>
 							</tr>
                 	    </g:each>
                     </tbody>

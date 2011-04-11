@@ -93,7 +93,7 @@
                                     <label for="usuarioPC2"><g:message code="equipo.usuarioPC2" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: usuario)}">
-                                    <g:textField disable="yes" name="usuarioPC2" maxlength="64" value="${usuario}" />
+                                    <g:textField readonly="readonly" name="usuarioPC2" maxlength="64" value="${equipo.usuarioPC2}" />
                                 </td>
                             </tr>
                             <tr class="prop">
@@ -101,7 +101,7 @@
                                     <label for="contraseñaPC2"><g:message code="equipo.contraseñaPC2" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: equipo, field: 'contraseñaPC2', 'errors')}">
-                                    <g:textField name="contraseñaPC2" maxlength="64" value="${equipo.contraseñaPC2}" disable="true"/>
+                                    <g:passwordField name="contraseñaPC2" maxlength="64" value="${equipo?.contraseñaPC2}" disable="true"/>
                                 </td>
                             </tr>
                         </tbody>

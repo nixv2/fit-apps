@@ -9,8 +9,8 @@ class Equipo {
 	String semestre2
     String integrante3
 	String semestre3
-//    String usuarioPC2
-//    String contraseñaPC2
+    String usuarioPC2
+    String contraseñaPC2
 
     static constraints = {
         nombre blank: false, size:1..64
@@ -21,8 +21,8 @@ class Equipo {
         semestre2 maxSize:32, inList:['2','4','6','8']
         integrante3 blank: false, size:1..64
         semestre3 maxSize:32, inList:['2','4','6','8']
-//        usuarioPC2 blank: false, size:1..64
-//        contraseñaPC2 blank: false, size:1..64
+        usuarioPC2 blank: false, size:1..64
+        contraseñaPC2 blank: false, size:1..64
     }
 
     static mapping = {
@@ -41,7 +41,7 @@ class Equipo {
                 ilike('semestre2',filtro)
                 ilike('integrante3',filtro)
                 ilike('semestre3',filtro)
-//                ilike('usuarioPC2',filtro)
+                ilike('usuarioPC2',filtro)
             }
         }
     }

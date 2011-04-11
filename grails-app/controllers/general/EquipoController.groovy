@@ -28,9 +28,10 @@ class EquipoController {
         params.max = Math.min(params.max ? params.max.toInteger() : 10, 100)
         def resultado = equipoService.listaConCantidad(params)
         def usuario = "team"+(resultado.cantidad+1)
-        log.debug "usuario $usuario"
         Equipo equipo = new Equipo(params)
-        return [equipo:equipo]//, usuario: usuario]
+        equipo.usuarioPC2 = usuario
+        log.debug "$equipo.usuarioPC2"
+        return [equipo:equipo]
     }
 
     def crea = {
